@@ -35,10 +35,9 @@ contract AgeRegistryTest is Test {
         assertEq(registered, true);
     }
 
-    function testRevertRegisterMyselfWhenAgeIs18()external{
+    function testRevertRegisterMyselfWhenAgeIs18() external {
         vm.expectRevert(AgeRegistry__AgeTooHigh.selector);
         vm.prank(user);
         registry.registerMyself(18);
     }
 }
-
