@@ -30,7 +30,7 @@ contract PiggyBankTest is Test {
         assertEq(piggyBank.getBalance(user), 0.6 ether);
     }
 
-    function test_Reverts_whenWithdrawAmountIsZero() external {
+    function test_Reverts_WhenWithdrawAmountIsZero() external {
         vm.expectRevert(PiggyBank.PiggyBank__ZeroAmount.selector);
         piggyBank.withdraw(0 ether);
     }
